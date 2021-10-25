@@ -1,5 +1,6 @@
 import React, {FC} from 'react';
 import {operationEnum} from "../types/types";
+import { Button} from 'antd';
 
 interface OperationBtnProps{
     operation:operationEnum,
@@ -10,9 +11,9 @@ interface OperationBtnProps{
 
 const OperationBtn:FC<OperationBtnProps> = ({operation,onClick}) => {
     return (
-        <button onClick={()=>onClick(operation)}>
+        <Button   type="primary" shape="circle"  onClick={()=>onClick(operation)}>
             {operation}
-        </button>
+        </Button>
     );
 };
 

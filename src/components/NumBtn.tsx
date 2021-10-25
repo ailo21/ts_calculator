@@ -1,4 +1,5 @@
 import React, {FC} from 'react';
+import { Button} from 'antd';
 
 interface NumBtnProps {
     num: number,
@@ -7,9 +8,9 @@ interface NumBtnProps {
 
 const NumBtn: FC<NumBtnProps> = ({num,onClick}) => {
     return (
-        <button onClick={()=>onClick(num)}>
+        <Button  type="ghost" shape="circle" onClick={()=>onClick(num)}>
             {num}
-        </button>
+        </Button>
     );
 };
 

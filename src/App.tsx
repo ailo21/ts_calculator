@@ -1,8 +1,10 @@
 import React, {useEffect, useState} from 'react';
 import './App.css';
+import 'antd/dist/antd.css';
 import NumBtn from "./components/NumBtn";
 import OperationBtn from "./components/OperationBtn";
 import {operationEnum} from "./types/types";
+import {Input} from 'antd'
 
 function App() {
     const [firstNum, setFirstNum] = useState<number | undefined>();
@@ -66,7 +68,9 @@ function App() {
 
     return (
         <div className="App">
-            <input readOnly value={displayText} type={"text"}/>
+            <div className={"result_input"}>
+                <Input  readOnly value={displayText} type={"text"}/>
+            </div>
 
             <div className={"row"}>
                 <NumBtn num={7} onClick={() => clickHandlerNum(7)}/>
