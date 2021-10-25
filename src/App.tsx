@@ -5,6 +5,7 @@ import NumBtn from "./components/NumBtn";
 import OperationBtn from "./components/OperationBtn";
 import {operationEnum} from "./types/types";
 import {Input} from 'antd'
+import { CloseOutlined,MinusOutlined,PlusOutlined } from '@ant-design/icons';
 
 function App() {
     const [firstNum, setFirstNum] = useState<number | undefined>();
@@ -77,30 +78,42 @@ function App() {
                 <NumBtn num={8} onClick={() => clickHandlerNum(8)}/>
                 <NumBtn num={9} onClick={() => clickHandlerNum(9)}/>
                 <OperationBtn operation={operationEnum.multiply}
-                              onClick={() => clickHandlerOperation(operationEnum.multiply)}/>
+                              onClick={() => clickHandlerOperation(operationEnum.multiply)}>
+                    <CloseOutlined/>
+                </OperationBtn>
             </div>
             <div className={"row"}>
                 <NumBtn num={4} onClick={() => clickHandlerNum(4)}/>
                 <NumBtn num={5} onClick={() => clickHandlerNum(5)}/>
                 <NumBtn num={6} onClick={() => clickHandlerNum(6)}/>
                 <OperationBtn operation={operationEnum.subtract}
-                              onClick={() => clickHandlerOperation(operationEnum.subtract)}/>
+                              onClick={() => clickHandlerOperation(operationEnum.subtract)}>
+                    <MinusOutlined/>
+                </OperationBtn>
             </div>
             <div className={"row"}>
                 <NumBtn num={1} onClick={() => clickHandlerNum(1)}/>
                 <NumBtn num={2} onClick={() => clickHandlerNum(2)}/>
                 <NumBtn num={3} onClick={() => clickHandlerNum(3)}/>
-                <OperationBtn operation={operationEnum.fold} onClick={() => clickHandlerOperation(operationEnum.fold)}/>
+                <OperationBtn operation={operationEnum.fold} onClick={() => clickHandlerOperation(operationEnum.fold)}>
+                    <PlusOutlined/>
+                </OperationBtn>
 
             </div>
             <div className={"row"}>
                 <OperationBtn operation={operationEnum.clear}
-                              onClick={() => clickHandlerOperation(operationEnum.clear)}/>
+                              onClick={() => clickHandlerOperation(operationEnum.clear)}>
+                    <span>C</span>
+                </OperationBtn>
                 <NumBtn num={0} onClick={() => clickHandlerNum(0)}/>
                 <OperationBtn operation={operationEnum.division}
-                              onClick={() => clickHandlerOperation(operationEnum.division)}/>
+                              onClick={() => clickHandlerOperation(operationEnum.division)}>
+                    <span>/</span>
+                </OperationBtn>
                 <OperationBtn operation={operationEnum.equals}
-                              onClick={() => clickHandlerOperation(operationEnum.equals)}/>
+                              onClick={() => clickHandlerOperation(operationEnum.equals)}>
+                    <span>=</span>
+                </OperationBtn>
 
             </div>
 

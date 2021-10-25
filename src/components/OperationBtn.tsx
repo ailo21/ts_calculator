@@ -7,12 +7,10 @@ interface OperationBtnProps{
     onClick:(operation:operationEnum)=>void
 }
 
-
-
-const OperationBtn:FC<OperationBtnProps> = ({operation,onClick}) => {
+const OperationBtn:FC<OperationBtnProps> = ({operation,onClick,children}) => {
     return (
-        <Button   type="primary" shape="circle"  onClick={()=>onClick(operation)}>
-            {operation}
+        <Button   type="primary" shape="circle"  onClick={()=>onClick(operation)} >
+            {children}
         </Button>
     );
 };
