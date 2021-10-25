@@ -1,9 +1,9 @@
 import React, {FC} from 'react';
-import {operation} from "../types/types";
+import {operationEnum} from "../types/types";
 
 interface OperationBtnProps{
-    operation:operation,
-    onClick:(operation:operation)=>void
+    operation:operationEnum,
+    onClick:(operation:operationEnum)=>void
 }
 
 
